@@ -31,8 +31,6 @@ class CameraViewController: UIViewController, CameraDiscovererDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        print("TST")
         AddDeviceButton.backgroundColor = UIColor.clear
         AddDeviceButton.layer.cornerRadius = 5;
         AddDeviceButton.layer.borderWidth = 1;
@@ -47,14 +45,7 @@ class CameraViewController: UIViewController, CameraDiscovererDelegate {
         CancelDeviceButton.isHidden = true;
         
         cameraDiscoverer.delegate = self
-        
-        
-        
-        print(addCameraView.frame.origin.y)
-        print(addCameraView.frame.origin.x)
-        print(addCameraView.frame.height)
-        
-        
+                
         view.layoutIfNeeded()
 
         
@@ -64,11 +55,9 @@ class CameraViewController: UIViewController, CameraDiscovererDelegate {
 
     
     @IBAction func addCamera(_ sender: UIButton) {
-        print("Start")
+        
         AddDeviceButton.isHidden = true
-        
         CancelDeviceButton.isHidden = false;
-        
         
         UIView.animate(withDuration: 0.3,
         delay: 0.0,
@@ -90,10 +79,8 @@ class CameraViewController: UIViewController, CameraDiscovererDelegate {
     @IBAction func cancelDeviceScan(_ sender: UIButton) {
         
         AddDeviceButton.isHidden = false
-        
         CancelDeviceButton.isHidden = true;
         
-        print("Close")
         UIView.animate(withDuration: 0.3,
         delay: 0.0,
         options: [],
