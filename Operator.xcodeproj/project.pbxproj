@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BA16D7062406C446008E156B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16D7052406C446008E156B /* AppDelegate.swift */; };
 		BA16D7082406C446008E156B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16D7072406C446008E156B /* SceneDelegate.swift */; };
-		BA16D70A2406C446008E156B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16D7092406C446008E156B /* ViewController.swift */; };
 		BA16D70D2406C446008E156B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA16D70B2406C446008E156B /* Main.storyboard */; };
 		BA16D70F2406C447008E156B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA16D70E2406C447008E156B /* Assets.xcassets */; };
 		BA16D7122406C447008E156B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA16D7102406C447008E156B /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		BA42A12D24085424006417A9 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A12C24085424006417A9 /* ThunderRequest.framework */; };
 		BA42A12E24085424006417A9 /* ThunderRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A12C24085424006417A9 /* ThunderRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA42A130240864C2006417A9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42A12F240864C2006417A9 /* CameraViewController.swift */; };
+		BAF7A2F8240D640E0054ABB1 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7A2F7240D640E0054ABB1 /* DeviceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,6 @@
 		BA16D7022406C446008E156B /* Operator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Operator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA16D7052406C446008E156B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA16D7072406C446008E156B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA16D7092406C446008E156B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA16D70C2406C446008E156B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA16D70E2406C447008E156B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA16D7112406C447008E156B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		BA42A12C24085424006417A9 /* ThunderRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ThunderRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA42A12F240864C2006417A9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		BA42A13424087B82006417A9 /* ThunderRequestMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ThunderRequestMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAF7A2F7240D640E0054ABB1 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 				BA42A110240851BC006417A9 /* Rocc.xcodeproj */,
 				BA16D7052406C446008E156B /* AppDelegate.swift */,
 				BA16D7072406C446008E156B /* SceneDelegate.swift */,
-				BA16D7092406C446008E156B /* ViewController.swift */,
 				BA42A12F240864C2006417A9 /* CameraViewController.swift */,
+				BAF7A2F7240D640E0054ABB1 /* DeviceListView.swift */,
 				BA16D70B2406C446008E156B /* Main.storyboard */,
 				BA328F7A240AECE3000659C8 /* CameraListController.swift */,
 				BA16D70E2406C447008E156B /* Assets.xcassets */,
@@ -377,9 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA16D70A2406C446008E156B /* ViewController.swift in Sources */,
 				BA42A130240864C2006417A9 /* CameraViewController.swift in Sources */,
 				BA328F7B240AECE3000659C8 /* CameraListController.swift in Sources */,
+				BAF7A2F8240D640E0054ABB1 /* DeviceListView.swift in Sources */,
 				BA16D7062406C446008E156B /* AppDelegate.swift in Sources */,
 				BA16D7082406C446008E156B /* SceneDelegate.swift in Sources */,
 			);

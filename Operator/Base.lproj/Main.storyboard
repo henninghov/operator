@@ -26,7 +26,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-tn-vOA">
                                 <rect key="frame" x="0.0" y="718" width="414" height="144"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-2S-444">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-2S-444">
                                         <rect key="frame" x="134" y="22" width="146" height="46"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -38,11 +38,10 @@
                                             <action selector="addCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2C-Wb-sgK"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOv-3n-88r" userLabel="Cancel">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOv-3n-88r" userLabel="Cancel">
                                         <rect key="frame" x="134" y="22" width="146" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="146" id="Xei-0S-it3"/>
-                                            <constraint firstAttribute="height" constant="46" id="na2-VZ-yAS"/>
+                                            <constraint firstAttribute="height" constant="46" id="GYv-SB-ewL"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="45" minY="0.0" maxX="45" maxY="0.0"/>
@@ -54,7 +53,7 @@
                                             <action selector="cancelDeviceScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfA-Jy-2bw"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-bG-Idc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-bG-Idc">
                                         <rect key="frame" x="76.5" y="83" width="261" height="21.5"/>
                                         <string key="text">The Sony Logo and all other trademarks belong to their 
 respective owners and may not be used without permission</string>
@@ -65,15 +64,15 @@ respective owners and may not be used without permission</string>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.44705882352941173" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="hOv-3n-88r" firstAttribute="top" secondItem="ggm-tn-vOA" secondAttribute="top" constant="22" id="1gh-V4-DNH"/>
+                                    <constraint firstItem="Ncq-bG-Idc" firstAttribute="top" secondItem="e0J-2S-444" secondAttribute="bottom" constant="15" id="2QA-Pz-GyM"/>
                                     <constraint firstAttribute="height" constant="144" id="2wW-O3-3q4"/>
                                     <constraint firstItem="hOv-3n-88r" firstAttribute="baseline" secondItem="e0J-2S-444" secondAttribute="baseline" id="7aw-gg-rcg"/>
                                     <constraint firstItem="hOv-3n-88r" firstAttribute="centerX" secondItem="ggm-tn-vOA" secondAttribute="centerX" id="GiK-Qk-Ezh"/>
                                     <constraint firstItem="e0J-2S-444" firstAttribute="centerX" secondItem="Ncq-bG-Idc" secondAttribute="centerX" id="LgJ-15-SFg"/>
                                     <constraint firstItem="hOv-3n-88r" firstAttribute="trailing" secondItem="e0J-2S-444" secondAttribute="trailing" id="NL6-ge-aGT"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="144" id="dRt-wH-LlK"/>
                                     <constraint firstItem="hOv-3n-88r" firstAttribute="top" secondItem="e0J-2S-444" secondAttribute="top" id="fjD-Ky-fhN"/>
                                     <constraint firstItem="hOv-3n-88r" firstAttribute="leading" secondItem="e0J-2S-444" secondAttribute="leading" id="fk6-1a-CxU"/>
-                                    <constraint firstItem="Ncq-bG-Idc" firstAttribute="top" secondItem="hOv-3n-88r" secondAttribute="bottom" constant="15" id="orO-PC-q1d"/>
                                     <constraint firstItem="e0J-2S-444" firstAttribute="firstBaseline" secondItem="hOv-3n-88r" secondAttribute="firstBaseline" id="r5T-Si-w6C"/>
                                 </constraints>
                             </view>
