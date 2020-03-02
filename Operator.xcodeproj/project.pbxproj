@@ -15,6 +15,12 @@
 		BA16D7122406C447008E156B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA16D7102406C447008E156B /* LaunchScreen.storyboard */; };
 		BA16D71D2406C447008E156B /* OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16D71C2406C447008E156B /* OperatorTests.swift */; };
 		BA16D7282406C447008E156B /* OperatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16D7272406C447008E156B /* OperatorUITests.swift */; };
+		BA328F7B240AECE3000659C8 /* CameraListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA328F7A240AECE3000659C8 /* CameraListController.swift */; };
+		BA42A12624085405006417A9 /* Rocc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A119240851BC006417A9 /* Rocc.framework */; };
+		BA42A12724085405006417A9 /* Rocc.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A119240851BC006417A9 /* Rocc.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA42A12D24085424006417A9 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A12C24085424006417A9 /* ThunderRequest.framework */; };
+		BA42A12E24085424006417A9 /* ThunderRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA42A12C24085424006417A9 /* ThunderRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA42A130240864C2006417A9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA42A12F240864C2006417A9 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +38,50 @@
 			remoteGlobalIDString = BA16D7012406C446008E156B;
 			remoteInfo = Operator;
 		};
+		BA42A118240851BC006417A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA42A110240851BC006417A9 /* Rocc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1316A4D2089C08F006BD136;
+			remoteInfo = Rocc;
+		};
+		BA42A11A240851BC006417A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA42A110240851BC006417A9 /* Rocc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1316A562089C08F006BD136;
+			remoteInfo = RoccTests;
+		};
+		BA42A11C240851BC006417A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA42A110240851BC006417A9 /* Rocc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1AF5088208DC3A80029336B;
+			remoteInfo = RoccMac;
+		};
+		BA42A11E240851BC006417A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA42A110240851BC006417A9 /* Rocc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B1AF5090208DC3A80029336B;
+			remoteInfo = RoccMacTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA42A12824085405006417A9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BA42A12724085405006417A9 /* Rocc.framework in Embed Frameworks */,
+				BA42A12E24085424006417A9 /* ThunderRequest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BA16D7022406C446008E156B /* Operator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Operator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +98,11 @@
 		BA16D7232406C447008E156B /* OperatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA16D7272406C447008E156B /* OperatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorUITests.swift; sourceTree = "<group>"; };
 		BA16D7292406C447008E156B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA328F7A240AECE3000659C8 /* CameraListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListController.swift; sourceTree = "<group>"; };
+		BA42A110240851BC006417A9 /* Rocc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rocc.xcodeproj; path = rocc/Rocc.xcodeproj; sourceTree = SOURCE_ROOT; };
+		BA42A12C24085424006417A9 /* ThunderRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ThunderRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA42A12F240864C2006417A9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		BA42A13424087B82006417A9 /* ThunderRequestMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ThunderRequestMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA42A12624085405006417A9 /* Rocc.framework in Frameworks */,
+				BA42A12D24085424006417A9 /* ThunderRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +139,7 @@
 				BA16D71B2406C447008E156B /* OperatorTests */,
 				BA16D7262406C447008E156B /* OperatorUITests */,
 				BA16D7032406C446008E156B /* Products */,
+				BA42A10C24084B3A006417A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +156,13 @@
 		BA16D7042406C446008E156B /* Operator */ = {
 			isa = PBXGroup;
 			children = (
+				BA42A110240851BC006417A9 /* Rocc.xcodeproj */,
 				BA16D7052406C446008E156B /* AppDelegate.swift */,
 				BA16D7072406C446008E156B /* SceneDelegate.swift */,
 				BA16D7092406C446008E156B /* ViewController.swift */,
+				BA42A12F240864C2006417A9 /* CameraViewController.swift */,
 				BA16D70B2406C446008E156B /* Main.storyboard */,
+				BA328F7A240AECE3000659C8 /* CameraListController.swift */,
 				BA16D70E2406C447008E156B /* Assets.xcassets */,
 				BA16D7102406C447008E156B /* LaunchScreen.storyboard */,
 				BA16D7132406C447008E156B /* Info.plist */,
@@ -128,6 +188,26 @@
 			path = OperatorUITests;
 			sourceTree = "<group>";
 		};
+		BA42A10C24084B3A006417A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA42A13424087B82006417A9 /* ThunderRequestMac.framework */,
+				BA42A12C24085424006417A9 /* ThunderRequest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA42A111240851BC006417A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA42A119240851BC006417A9 /* Rocc.framework */,
+				BA42A11B240851BC006417A9 /* RoccTests.xctest */,
+				BA42A11D240851BC006417A9 /* RoccMac.framework */,
+				BA42A11F240851BC006417A9 /* RoccMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +218,7 @@
 				BA16D6FE2406C446008E156B /* Sources */,
 				BA16D6FF2406C446008E156B /* Frameworks */,
 				BA16D7002406C446008E156B /* Resources */,
+				BA42A12824085405006417A9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,6 +299,12 @@
 			mainGroup = BA16D6F92406C446008E156B;
 			productRefGroup = BA16D7032406C446008E156B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BA42A111240851BC006417A9 /* Products */;
+					ProjectRef = BA42A110240851BC006417A9 /* Rocc.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BA16D7012406C446008E156B /* Operator */,
@@ -226,6 +313,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BA42A119240851BC006417A9 /* Rocc.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Rocc.framework;
+			remoteRef = BA42A118240851BC006417A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BA42A11B240851BC006417A9 /* RoccTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RoccTests.xctest;
+			remoteRef = BA42A11A240851BC006417A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BA42A11D240851BC006417A9 /* RoccMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RoccMac.framework;
+			remoteRef = BA42A11C240851BC006417A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BA42A11F240851BC006417A9 /* RoccMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RoccMacTests.xctest;
+			remoteRef = BA42A11E240851BC006417A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BA16D7002406C446008E156B /* Resources */ = {
@@ -260,6 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA16D70A2406C446008E156B /* ViewController.swift in Sources */,
+				BA42A130240864C2006417A9 /* CameraViewController.swift in Sources */,
+				BA328F7B240AECE3000659C8 /* CameraListController.swift in Sources */,
 				BA16D7062406C446008E156B /* AppDelegate.swift in Sources */,
 				BA16D7082406C446008E156B /* SceneDelegate.swift in Sources */,
 			);
@@ -435,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KZFU5ZH75;
 				INFOPLIST_FILE = Operator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KZFU5ZH75;
 				INFOPLIST_FILE = Operator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

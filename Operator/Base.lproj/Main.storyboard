@@ -4,36 +4,58 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Operator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Operator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-tn-vOA">
-                                <rect key="frame" x="0.0" y="720" width="414" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFX-1E-WiO" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.76078431372549016" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ekg-9j-J2k"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-tn-vOA">
+                                <rect key="frame" x="0.0" y="718" width="414" height="144"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-2S-444">
-                                        <rect key="frame" x="122" y="30" width="170" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-2S-444">
+                                        <rect key="frame" x="134" y="22" width="146" height="46"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
-                                        <state key="normal" title="Add camera" image="plus" catalog="system">
+                                        <state key="normal" title="Add camera">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="addCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2C-Wb-sgK"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-bG-Idc">
-                                        <rect key="frame" x="77" y="91" width="261" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOv-3n-88r" userLabel="Cancel">
+                                        <rect key="frame" x="134" y="22" width="146" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="Xei-0S-it3"/>
+                                            <constraint firstAttribute="height" constant="46" id="na2-VZ-yAS"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="45" minY="0.0" maxX="45" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelDeviceScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfA-Jy-2bw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncq-bG-Idc">
+                                        <rect key="frame" x="76.5" y="83" width="261" height="21.5"/>
                                         <string key="text">The Sony Logo and all other trademarks belong to their 
 respective owners and may not be used without permission</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="9"/>
@@ -41,39 +63,85 @@ respective owners and may not be used without permission</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.44705882352941173" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="top" secondItem="ggm-tn-vOA" secondAttribute="top" constant="22" id="1gh-V4-DNH"/>
+                                    <constraint firstAttribute="height" constant="144" id="2wW-O3-3q4"/>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="baseline" secondItem="e0J-2S-444" secondAttribute="baseline" id="7aw-gg-rcg"/>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="centerX" secondItem="ggm-tn-vOA" secondAttribute="centerX" id="GiK-Qk-Ezh"/>
+                                    <constraint firstItem="e0J-2S-444" firstAttribute="centerX" secondItem="Ncq-bG-Idc" secondAttribute="centerX" id="LgJ-15-SFg"/>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="trailing" secondItem="e0J-2S-444" secondAttribute="trailing" id="NL6-ge-aGT"/>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="top" secondItem="e0J-2S-444" secondAttribute="top" id="fjD-Ky-fhN"/>
+                                    <constraint firstItem="hOv-3n-88r" firstAttribute="leading" secondItem="e0J-2S-444" secondAttribute="leading" id="fk6-1a-CxU"/>
+                                    <constraint firstItem="Ncq-bG-Idc" firstAttribute="top" secondItem="hOv-3n-88r" secondAttribute="bottom" constant="15" id="orO-PC-q1d"/>
+                                    <constraint firstItem="e0J-2S-444" firstAttribute="firstBaseline" secondItem="hOv-3n-88r" secondAttribute="firstBaseline" id="r5T-Si-w6C"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCe-iV-3mj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DW7-s6-8jm">
-                                <rect key="frame" x="0.0" y="81" width="414" height="637"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-et-jaS">
-                                        <rect key="frame" x="0.0" y="58" width="414" height="581"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-dF-1Wm">
+                                <rect key="frame" x="0.0" y="112" width="414" height="598"/>
+                                <color key="backgroundColor" red="0.0" green="0.44705882352941173" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZXl-1T-vGE">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="CameraName" id="UHO-Vr-7DR">
+                                        <rect key="frame" x="10" y="10" width="222" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DEH-MC-kQD">
+                                            <rect key="frame" x="0.0" y="0.0" width="222" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="222" height="70"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CameraIcon" id="HUi-Zb-caA">
+                                        <rect key="frame" x="242" y="10" width="80" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TOZ-NP-CKa">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="80" height="70"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Connectivity" id="oLs-GV-cqN">
+                                        <rect key="frame" x="332" y="10" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DFh-kV-EIB">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="70" height="70"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VFX-1E-WiO" firstAttribute="leading" secondItem="iKV-dF-1Wm" secondAttribute="leading" id="2tb-fo-eAl"/>
+                            <constraint firstItem="ggm-tn-vOA" firstAttribute="top" secondItem="iKV-dF-1Wm" secondAttribute="bottom" constant="8" id="BBx-f0-VZN"/>
+                            <constraint firstItem="ggm-tn-vOA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IJz-Gr-2ec"/>
+                            <constraint firstItem="ggm-tn-vOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q5f-N8-wnw"/>
+                            <constraint firstItem="ggm-tn-vOA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Rud-pO-Bis"/>
+                            <constraint firstItem="VFX-1E-WiO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VHi-Bq-dxc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iKV-dF-1Wm" secondAttribute="trailing" id="aAx-x5-Ks3"/>
+                            <constraint firstItem="VFX-1E-WiO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c2S-xp-cCe"/>
+                            <constraint firstItem="VFX-1E-WiO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cAT-dk-Flv"/>
+                            <constraint firstItem="iKV-dF-1Wm" firstAttribute="top" secondItem="VFX-1E-WiO" secondAttribute="bottom" constant="8" id="mKD-Du-7Hm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="AddDeviceButton" destination="e0J-2S-444" id="Al7-GB-bCd"/>
+                        <outlet property="CancelDeviceButton" destination="hOv-3n-88r" id="3sI-Bx-p8Q"/>
+                        <outlet property="addCameraConstraint" destination="2wW-O3-3q4" id="WXp-Qf-ylb"/>
+                        <outlet property="addCameraView" destination="ggm-tn-vOA" id="x9j-Ih-NN8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="128.98550724637681" y="136.14130434782609"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Image" width="375" height="530"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
-    </resources>
 </document>

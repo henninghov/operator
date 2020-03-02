@@ -10,11 +10,14 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CameraListControllerCollectionViewController: UICollectionViewController {
-
+class CameraListController: UICollectionViewController {
+    
+    var modelData = ["Sony α9","Sony α6000","Sony α7rii"]
+        
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         print("loaded");
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,19 +41,21 @@ class CameraListControllerCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return modelData.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell
+        if let label = cell.viewWithTag(100) as? UILabel {
+            label.text = modelData[indexPath.row]
+        }
     
         return cell
     }
